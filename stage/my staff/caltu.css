@@ -1,0 +1,30 @@
+.conteiner{
+    background-color: aliceblue;
+    box-shadow: 3em gray;
+    height: 300px;
+    width: 250px;
+}
+.nav-links{
+    display: block;
+}
+.conteiner a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    display: none;
+}
+.conteiner:hover a{
+    display: block;
+}
+a:hover{
+    color: rgb(255, 255, 255);
+    transition-timing-function : 0.2s;
+    background-color: black;
+    padding: 20px;
+    height: 10px;
+    width: 75px;
+    border-radius: 20px;
+}
+button{
+    padding: 10px;
+}
