@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rwanda · traditions of a thousand hills</title>
+  <!-- Font Awesome for icons (free version) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+
+    body {
+      background-color: #faf7f2;
+      color: #1e2b2f;
+      line-height: 1.5;
+    }
+
+    /* warm earthy palette — reminiscent of imigongo, clay, and hills */
+    :root {
+      --rwanda-red: #9e2a2b;
+      --rwanda-sun: #e9b35f;
+      --rwanda-earth: #5e4b3a;
+      --rwanda-green: #2b5e3b;
+      --rwanda-cream: #f4ede4;
+      --rwanda-straw: #d9c5a6;
+    }
+
+    /* navigation */
+    .nav-bar {
+      background: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 4px solid var(--rwanda-red);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    .logo i {
+      color: var(--rwanda-red);
+      font-size: 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-weight: 500;
+      color: var(--rwanda-earth);
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: inherit;
+      transition: 0.2s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: var(--rwanda-sun);
+      color: var(--rwanda-red);
+    }
+
+    /* HERO section — with traditional motif (Ingoma / drum) */
+    .hero {
+      background: linear-gradient(107deg, #e1cfb6 0%, #ecdcc9 100%);
+      padding: 3rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      border-bottom: 8px double var(--rwanda-red);
+    }
+
+    .hero-text {
+      flex: 1 1 300px;
+      max-width: 650px;
+    }
+
+    .hero-text h1 {
+      font-size: 3.3rem;
+      font-weight: 700;
+      color: var(--rwanda-earth);
+      line-height: 1.2;
+    }
+
+    .hero-text h1 span {
+      color: var(--rwanda-red);
+      border-bottom: 5px solid var(--rwanda-sun);
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    .hero-text p {
+      font-size: 1.3rem;
+      margin: 1.5rem 0 1rem 0;
+      color: #2f3e34;
+      font-style: italic;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 1.8rem;
+      margin-top: 2rem;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--rwanda-red);
+      background: rgba(255,255,240,0.5);
+      padding: 0.2rem 0.8rem;
+      border-radius: 40px;
+      backdrop-filter: blur(2px);
+    }
+
+    .hero-image {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      width: 380px;
+      border-radius: 50% 20% / 40% 60%;
+      box-shadow: 20px 20px 0 var(--rwanda-sun);
+      border: 4px solid white;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      background: #b38e70; /* fallback */
+    }
+
+    /* dummy image via Font Awesome + CSS — but we use font icon as placeholder with style */
+    .icon-placeholder {
+      background: var(--rwanda-earth);
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      border-radius: 50% 20% / 40% 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      color: var(--rwanda-cream);
+      background-image: radial-gradient(circle at 30% 30%, #846b54, #3f3328);
+    }
+
+    /* main container */
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem;
+    }
+
+    /* section headers */
+    .section-title {
+      font-size: 2.6rem;
+      font-weight: 600;
+      color: var(--rwanda-earth);
+      border-left: 12px solid var(--rwanda-red);
+      padding-left: 1.5rem;
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+    }
+
+    .section-sub {
+      display: block;
+      font-size: 1.2rem;
+      color: var(--rwanda-green);
+      margin-top: 0.2rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    /* card grids */
+    .tradition-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .card {
+      background: white;
+      border-radius: 28px 12px 28px 12px; /* dynamic shape */
+      box-shadow: 0 12px 28px -8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.2s ease-in-out;
+      border: 1px solid #ede0d0;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 35px -10px #a48b7680;
+    }
+
+    .card-img {
+      background-color: #bba48b;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 4rem;
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: overlay;
+    }
+
+    /* diverse background hints for each tradition */
+    .card:nth-child(1) .card-img { background: #a55744; }  /* intore */
+    .card:nth-child(2) .card-img { background: #dbbb92; }  /* imigongo */
+    .card:nth-child(3) .card-img { background: #6d8f6d; }  /* umuganda */
+    .card:nth-child(4) .card-img { background: #b1784b; }  /* inyambo */
+    .card:nth-child(5) .card-img { background: #ab8e6a; }  /* agaseke */
+    .card:nth-child(6) .card-img { background: #c9a27b; }  /* ibyivugo */
+
+    .card-content {
+      padding: 1.7rem 1.5rem 2rem;
+    }
+
+    .card-content h3 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      color: var(--rwanda-red);
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content p {
+      color: #2c3e3a;
+      font-size: 1rem;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 1rem;
+      background: var(--rwanda-sun);
+      padding: 0.25rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #1e2b1e;
+    }
+
+    /* feature banner: intore dance */
+    .feature-banner {
+      background: var(--rwanda-earth);
+      color: #f9efe5;
+      padding: 3rem 2.5rem;
+      border-radius: 60px 12px 60px 12px;
+      margin: 4rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+      background-image: repeating-linear-gradient(45deg, #6b5442 0px, #6b5442 2px, #7c6350 2px, #7c6350 8px);
+    }
+
+    .feature-text {
+      flex: 2 1 300px;
+    }
+
+    .feature-text h2 {
+      font-size: 2.5rem;
+      font-weight: 650;
+      border-bottom: 3px solid var(--rwanda-sun);
+      display: inline-block;
+      padding-bottom: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .feature-text i {
+      color: var(--rwanda-sun);
+      margin-right: 10px;
+    }
+
+    .feature-stats {
+      flex: 1 1 200px;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(4px);
+      padding: 1.5rem;
+      border-radius: 24px;
+      text-align: center;
+    }
+
+    .feature-stats p {
+      font-size: 1.3rem;
+      margin: 0.5rem 0;
+    }
+
+    /* food & crafts */
+    .craft-showcase {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .craft-item {
+      background: var(--rwanda-cream);
+      flex: 1 1 200px;
+      border-radius: 30px 0 30px 0;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border: 1px solid #d7c5b2;
+    }
+
+    .craft-item i {
+      font-size: 3.2rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 60% 40% 60% 40%;
+      color: var(--rwanda-red);
+      box-shadow: 0 6px 0 var(--rwanda-sun);
+    }
+
+    .craft-item h4 {
+      font-size: 1.7rem;
+      margin: 1rem 0 0.2rem;
+    }
+
+    /* quote */
+    .quote-block {
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 90px 12px 90px 12px;
+      margin: 4rem 0;
+      border: 2px solid var(--rwanda-straw);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #3a2e24;
+      box-shadow: 16px 16px 0 #e1c7ad;
+      text-align: center;
+    }
+
+    .quote-author {
+      margin-top: 1.2rem;
+      color: var(--rwanda-red);
+      font-weight: 600;
+    }
+
+    /* footer */
+    .footer {
+      background: #1e2b2f;
+      color: #e3dcd2;
+      padding: 2.5rem 2rem 1.5rem;
+      border-top: 10px solid var(--rwanda-red);
+    }
+
+    .footer-grid {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .footer h4 {
+      color: var(--rwanda-sun);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer i {
+      margin-right: 10px;
+      color: var(--rwanda-straw);
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 3rem;
+      color: #9a948c;
+      font-size: 0.95rem;
+    }
+
+    hr {
+      border: 1px solid #4f5d5b;
+      margin: 2rem 0 0.5rem;
+    }
+
+    /* responsiveness */
+    @media (max-width: 600px) {
+      .hero-text h1 { font-size: 2.4rem; }
+      .nav-bar { flex-direction: column; gap: 1rem; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 1.2rem; }
+      .section-title { font-size: 2rem; }
+    }
+
+    /* dummy image alternative — using font icons inside .card-img */
+    .card-img i {
+      font-size: 5rem;
+      filter: drop-shadow(4px 8px 4px #221d17a0);
+      color: #fff9ef;
+    }
+    .hero-image .icon-placeholder i {
+      font-size: 8rem;
+      color: rgba(255,235,200,0.9);
+    }
+  </style>
+</head>
+<body>
+  <!-- navigation -->
+  <nav class="nav-bar">
+    <div class="logo">
+      <i class="fas fa-drumstick-bite"></i> 
+      <span>IKINYARWANDA <span style="color: #9e2a2b;">&nbsp;|&nbsp;IMICO</span></span>
+    </div>
+    <div class="nav-links">
+      <a href="#">ubutore</a>
+      <a href="#">imigongo</a>
+      <a href="#">umuganda</a>
+      <a href="#">ubukwe</a>
+      <a href="#">agaseke</a>
+    </div>
+  </nav>
+
+  <!-- hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1><span>Rwanda</span> — a thousand traditions</h1>
+      <p>Umuco wacu ni ubutunzi bwacu &nbsp; <i class="fas fa-heart" style="color:#9e2a2b;"></i> <br> our culture is our treasure, passed through generations.</p>
+      <div class="hero-stats">
+        <div class="stat-item"><span class="stat-number">4+</span> <br> kingdoms heritage</div>
+        <div class="stat-item"><span class="stat-number">15</span> <br> ceremonial dances</div>
+        <div class="stat-item"><span class="stat-number">10+</span> <br> artisan crafts</div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="icon-placeholder">
+        <i class="fas fa-dharmachakra"></i> <!-- cosmic symbol, but we use it as traditional motif -->
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- traditions grid (core) -->
+    <h2 class="section-title">imigenzo n’imico <span class="section-sub">sacred customs & living traditions</span></h2>
+
+    <div class="tradition-grid">
+      <!-- card 1: intore -->
+      <div class="card">
+        <div class="card-img"><i class="fas fa-running"></i></div>
+        <div class="card-content">
+          <h3>Intore</h3>
+          <p>The royal dancers, once warriors who embodied bravery. Today they perform the majestic ‘dance of heroes’ with cowry shells and spears.</p>
+          <span class="tag">amayora / drumming</span>
+        </div>
+      </div>
+      <!-- card 2: imigongo -->
+      <div class="card">
+        <div class="card-img"><i class="fas fa-grip-lines"></i></div>
+        <div class="card-content">
+          <h3>Imigongo</h3>
+          <p>Unique geometric cow-dung art, originating from the ancient kingdom of Gisaka. Curves and spirals in natural earth tones.</p>
+          <span class="tag">ubukorikori / craft</span>
+        </div>
+      </div>
+      <!-- card 3: umuganda -->
+      <div class="card">
+        <div class="card-img"><i class="fas fa-people-carry-box"></i></div>
+        <div class="card-content">
+          <h3>Umuganda</h3>
+          <p>Community work on the last Saturday of every month. A tradition of cooperation that rebuilt the nation.</p>
+          <span class="tag">ubwumvikane / solidarity</span>
+        </div>
+      </div>
+      <!-- card 4: inyambo -->
+      <div class="card">
+        <div class="card-img"><i class="fas fa-hippo"></i></div>
+        <div class="card-content">
+          <h3>Inyambo</h3>
+          <p>The long-horned Ankole cows, praised in song by royal bards. Their horns reflect the majesty of the hills.</p>
+          <span class="tag">ibicurarangwe / poetry</span>
+        </div>
+      </div>
+      <!-- card 5: agaseke -->
+      <div class="card">
+        <div class="card-img"><i class="fas fa-basket-shopping"></i></div>
+        <div class="card-content">
+          <h3>Agaseke</h3>
+          <p>Peace basket weaving — intricate patterns, symbols of gifts and reconciliation. Woven by women with timeless skill.</p>
+          <span class="tag">ubuhumbure / weaving</span>
+        </div>
+      </div>
+      <!-- card 6: ibyivugo -->
+      <div class="card">
+        <div class="card-img"><i class="fas fa-microphone-lines"></i></div>
+        <div class="card-content">
+          <h3>Ibyivugo</h3>
+          <p>Self-praise poetry recited by heroes. A powerful oral tradition that boosts courage and preserves lineage.</p>
+          <span class="tag">ubusizi / poetry</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- feature: drum & dance -->
+    <div class="feature-banner">
+      <div class="feature-text">
+        <h2><i class="fas fa-drum"></i> Ingoma — the heart beat</h2>
+        <p style="font-size: 1.3rem;">The royal drum ‘Kalinga’ is only beaten at enthronement. Drums like Isakara, Igihumurizo accompany the Intore dancers, echoing from the hills.</p>
+        <p style="margin-top: 1rem;">✧ Drums are sacred — they represent the king’s power and the nation’s unity ✧</p>
+      </div>
+      <div class="feature-stats">
+        <i class="fas fa-drum" style="font-size: 3rem;"></i>
+        <p><strong>7+</strong> traditional drum types</p>
+        <p><strong>kw'irira</strong> drum festivals</p>
+      </div>
+    </div>
+
+    <!-- foods & crafts – extra details -->
+    <h2 class="section-title" style="margin-top: 2rem;">umuhogo n'umwumbwe <span class="section-sub">gastronomy & artisanal heritage</span></h2>
+    <div class="craft-showcase">
+      <div class="craft-item">
+        <i class="fas fa-utensils"></i>
+        <h4>Ubushera</h4>
+        <p>Sweet millet & sorghum drink, traditionally offered to guests.</p>
+      </div>
+      <div class="craft-item">
+        <i class="fas fa-bread-slice"></i>
+        <h4>Umutsima</h4>
+        <p>Cassava & maize loaf, often paired with beans or sauce.</p>
+      </div>
+      <div class="craft-item">
+        <i class="fas fa-paintbrush"></i>
+        <h4>Imigongo</h4>
+        <p>Natural pigments: red (clay), white (kaolin), black (banana ashes).</p>
+      </div>
+      <div class="craft-item">
+        <i class="fas fa-crown"></i>
+        <h4>Ubwenge</h4>
+        <p>Wisdom passed through proverbs (imigani) & storytelling.</p>
+      </div>
+    </div>
+
+    <!-- inspiring quote -->
+    <div class="quote-block">
+      <i class="fas fa-quote-left" style="color:#9e2a2b; font-size:2rem; opacity:0.5;"></i>
+      “U Rwanda rwacu, rugari kandi rwiza. Umuco wacu niwo muryango w’umuryango” <br> (Our Rwanda, vast and beautiful. Our culture is the family of families.)
+      <div class="quote-author">— traditional saying</div>
+    </div>
+
+    <!-- additional marriage & cow tradition -->
+    <div style="background: #ebe1d2; padding: 2rem; border-radius: 12px; display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 3rem 0;">
+      <div style="flex:1; min-width: 200px;">
+        <h3 style="color: var(--rwanda-red); font-size: 2rem;"><i class="fas fa-cow"></i> Gutwikurura</h3>
+        <p>Traditional marriage ceremony where the groom offers a cow (inkwano) to the bride’s family. Symbol of gratitude and union.</p>
+      </div>
+      <div style="flex:1; min-width: 200px;">
+        <h3 style="color: var(--rwanda-green); font-size: 2rem;"><i class="fas fa-feather"></i> Umuganura</h3>
+        <p>Thanksgiving harvest festival, the first fruits are offered to the king — a time of joy and unity.</p>
+      </div>
+      <div style="flex:1; min-width: 200px;">
+        <h3 style="color: #a1582b; font-size: 2rem;"><i class="fas fa-hand-holding-heart"></i> Kwita Izina</h3>
+        <p>Naming ceremony for newborns, akin to the famous gorilla naming, but rooted in family lineage.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4><i class="fas fa-globe"></i> I Rwanda</h4>
+        <p>Igihugu cy’imisozi igihumbi <br> (land of a thousand hills) </p>
+        <p><i class="fas fa-heart"></i> traditional values</p>
+      </div>
+      <div>
+        <h4><i class="fas fa-drum"></i> Intore</h4>
+        <ul style="list-style: none;">
+          <li>• Amaraba</li>
+          <li>• Umushagiriro</li>
+          <li>• Ingabo</li>
+        </ul>
+      </div>
+      <div>
+        <h4><i class="fas fa-palette"></i> Ubukorikori</h4>
+        <p>Imigongo · Agaseke · Ibihimba (pottery) · Imishanana (traditional dress)</p>
+      </div>
+      <div>
+        <h4><i class="fas fa-leaf"></i> Ubuzima</h4>
+        <p>Traditional medicine (umuti gakondo) & respect for nature (guhiga no kurima).</p>
+        CONTACT US
+        Phone number = 0728099776
+        Email = ireneuwishema@gmail.com
+      </div>
+    </div>
+    <hr>
+    <div class="copyright">
+      <i class="fas fa-copyright"></i> 2025 Umuco nyarwanda — komeza gakondo (keep the tradition alive). <br> Built with <i class="fas fa-heart" style="color:#e9b35f;"></i> to celebrate Rwanda's living heritage.
+    </div>
+  </footer>
+
+  <!-- small floating detail (optional) -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: #9e2a2b; color: white; border-radius: 60px; padding: 0.5rem 1.2rem; font-size: 0.9rem; box-shadow: 0 4px 14px black; z-index: 99;">
+    <i class="fas fa-drumstick-bite"></i> #rwandaCulture
+  </div>
+</body>
+</html>
