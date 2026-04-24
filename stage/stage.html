@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Stage System</title>
+    <link rel="stylesheet" href="stage.css">
+</head>
+<body>
+    <!-- Home Page -->
+    <section id="home-section" class="section active">
+        <div class="home-container">
+            <div class="home-hero">
+                <h1>🏠 Home Stage System</h1>
+                <p class="tagline">Do your stage work at home - no need to go to the workshop!</p>
+            </div>
+            
+            <div class="home-features">
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>For Students</h3>
+                    <p>Learn stage work from home. Access tutorials, book sessions with stagers, and track your progress.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔨</div>
+                    <h3>For Stagers</h3>
+                    <p>Share your expertise with students. Manage your bookings and help others learn stage work.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>For Managers</h3>
+                    <p>Manage users, bookings, tools, and tutorials. Keep everything organized and running smoothly.</p>
+                </div>
+            </div>
+            
+            <div class="home-buttons">
+                <button class="btn-home btn-login" onclick="showLogin()">🔑 Login</button>
+                <button class="btn-home btn-register" onclick="showRegister()">📝 Register</button>
+            </div>
+            
+            <!-- Services Section -->
+            <div class="home-services">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">📚</div>
+                        <h3>DIY Tutorials</h3>
+                        <p>Step-by-step guides for learning stage work at your own pace.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📅</div>
+                        <h3>Online Booking</h3>
+                        <p>Schedule sessions with experienced stagers from your home.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Tool Library</h3>
+                        <p>Access information about various tools needed for stage work.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📋</div>
+                        <h3>Project Tracking</h3>
+                        <p>Keep track of your learning progress and completed projects.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- How It Works Section -->
+            <div class="home-how-it-works">
+                <h2>How It Works</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Register</h3>
+                        <p>Create your account as a Student or Stager.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Get Approved</h3>
+                        <p>Wait for manager approval to access the system.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Learn & Practice</h3>
+                        <p>Access tutorials, book sessions, and track progress.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Master Skills</h3>
+                        <p>Become proficient in stage work from home.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonials Section -->
+            <div class="home-testimonials">
+                <h2>What People Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p>"This system helped me learn stage work without traveling to a workshop. Very convenient!"</p>
+                        <h4>- John D.</h4>
+                        <span>Student</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"As a stager, I can help more people from home. Great platform!"</p>
+                        <h4>- Sarah M.</h4>
+                        <span>Stager</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Managing our stage work has never been easier. Highly recommend!"</p>
+                        <h4>- IRENE</h4>
+                        <span>Manager</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="home-faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>❓ How do I register?</h3>
+                        <p>Click the Register button on the home page, fill in your details, and wait for approval.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>❓ Who can use this system?</h3>
+                        <p>Students who want to learn, Stagers who want to teach, and Managers who oversee the system.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>❓ Is it free to use?</h3>
+                        <p>Yes, the basic system is free for all registered users.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>❓ How do I book a session?</h3>
+                        <p>After logging in, go to the Booking section and fill out the booking form.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Section -->
+            <div class="home-contact">
+                <h2>Contact Us</h2>
+                <p>Have questions? Reach out to us!</p>
+                <div class="contact-info">
+                    <p>📧 Email: info@homestage.com</p>
+                    <p>📞 Phone: +250 123 456 789</p>
+                    <p>📍 Location: Kigali, Rwanda</p>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="home-footer">
+                <p>&copy; 2026 Home Stage System. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Section -->
+    <section id="register-section" class="section">
+        <div class="login-container">
+            <button class="home-link" onclick="showHome()">← Back to Home</button>
+            <h1>📝 Register</h1>
+            <form id="register-form">
+                <input type="text" id="reg-username" placeholder="Username" required>
+                <input type="email" id="reg-email" placeholder="Email" required>
+                <input type="password" id="reg-password" placeholder="Password" required>
+                <select id="reg-role">
+                    <option value="student">Student</option>
+                    <option value="stager">Stager</option>
+                </select>
+                <button type="submit">Register</button>
+            </form>
+            <p class="register-link">Already have account? <a href="#" onclick="showLogin()">Login here</a></p>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login-section" class="section">
+        <div class="login-container">
+            <button class="home-link" onclick="showHome()">← Back to Home</button>
+            <h1>🔑 Login</h1>
+            <p>Welcome back! Please login to continue.</p>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <select id="role">
+                    <option value="student">Student</option>
+                    <option value="stager">Stager</option>
+                    <option value="manager">Manager</option>
+                </select>
+                <button type="submit">Login</button>
+            </form>
+            <p class="register-link">New user? <a href="#" onclick="showRegister()">Register here</a></p>
+        </div>
+    </section>
+
+    <!-- Student Dashboard -->
+    <section id="student-dashboard" class="section">
+        <nav class="navbar">
+            <h2>🎓 Student Dashboard</h2>
+            <div class="nav-links">
+                <button onclick="showSection('student-booking')">📅 Booking</button>
+                <button onclick="showSection('student-tools')">🔧 Tools</button>
+                <button onclick="showSection('student-tutorials')">📚 Tutorials</button>
+                <button onclick="showSection('student-projects')">📋 My Projects</button>
+                <button onclick="logout()">🚪 Logout</button>
+            </div>
+        </nav>
+        <div class="dashboard-content">
+            <div class="welcome-card">
+                <h3>Welcome back, <span id="student-name">Student</span>!</h3>
+                <p>Learn and practice stage work from home</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>Bookings</h4>
+                    <p class="stat-number" id="student-bookings-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Projects</h4>
+                    <p class="stat-number" id="student-projects-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Tutorials Completed</h4>
+                    <p class="stat-number" id="student-tutorials-count">0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Booking Section -->
+    <section id="student-booking" class="section">
+        <nav class="navbar">
+            <h2>📅 Book a Session</h2>
+            <button onclick="showSection('student-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <form id="student-booking-form">
+                <div class="form-group">
+                    <label>Service Type</label>
+                    <select id="student-booking-service" required>
+                        <option value="">Select service...</option>
+                        <option value="consultation">Consultation</option>
+                        <option value="practice">Practice Session</option>
+                        <option value="training">Training</option>
+                        <option value="guidance">Guidance</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" id="student-booking-date" required>
+                </div>
+                <div class="form-group">
+                    <label>Time</label>
+                    <input type="time" id="student-booking-time" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="student-booking-description" placeholder="Describe what you need help with..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Book Appointment</button>
+            </form>
+            <div class="bookings-list">
+                <h3>Your Bookings</h3>
+                <div id="student-bookings-list"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Tools Section -->
+    <section id="student-tools" class="section">
+        <nav class="navbar">
+            <h2>🔧 Tool Management</h2>
+            <button onclick="showSection('student-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <div class="tools-grid" id="student-tools-grid"></div>
+        </div>
+    </section>
+
+    <!-- Student Tutorials Section -->
+    <section id="student-tutorials" class="section">
+        <nav class="navbar">
+            <h2>📚 DIY Tutorials</h2>
+            <button onclick="showSection('student-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <div class="tutorials-grid" id="student-tutorials-grid"></div>
+        </div>
+    </section>
+
+    <!-- Student Projects Section -->
+    <section id="student-projects" class="section">
+        <nav class="navbar">
+            <h2>📋 My Projects</h2>
+            <button onclick="showSection('student-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <form id="student-project-form">
+                <input type="text" id="student-project-name" placeholder="Project Name" required>
+                <textarea id="student-project-desc" placeholder="Project Description"></textarea>
+                <select id="student-project-status">
+                    <option value="planning">Planning</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <button type="submit" class="btn-primary">Add Project</button>
+            </form>
+            <div class="projects-list" id="student-projects-list"></div>
+        </div>
+    </section>
+
+    <!-- Stager Dashboard -->
+    <section id="stager-dashboard" class="section">
+        <nav class="navbar">
+            <h2>🔨 Stager Dashboard</h2>
+            <div class="nav-links">
+                <button onclick="showSection('stager-booking')">📅 My Bookings</button>
+                <button onclick="showSection('stager-tools')">🔧 My Tools</button>
+                <button onclick="showSection('stager-tutorials')">📚 Tutorials</button>
+                <button onclick="showSection('stager-projects')">📋 My Projects</button>
+                <button onclick="logout()">🚪 Logout</button>
+            </div>
+        </nav>
+        <div class="dashboard-content">
+            <div class="welcome-card">
+                <h3>Welcome back, <span id="stager-name">Stager</span>!</h3>
+                <p>Manage your stage work and help students</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>My Bookings</h4>
+                    <p class="stat-number" id="stager-bookings-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Projects</h4>
+                    <p class="stat-number" id="stager-projects-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Students Helped</h4>
+                    <p class="stat-number" id="stager-students-count">0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stager Booking Section -->
+    <section id="stager-booking" class="section">
+        <nav class="navbar">
+            <h2>📅 My Bookings</h2>
+            <button onclick="showSection('stager-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <div class="bookings-list">
+                <h3>Your Scheduled Sessions</h3>
+                <div id="stager-bookings-list"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stager Tools Section -->
+    <section id="stager-tools" class="section">
+        <nav class="navbar">
+            <h2>🔧 My Tools</h2>
+            <button onclick="showSection('stager-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <div class="tools-grid" id="stager-tools-grid"></div>
+        </div>
+    </section>
+
+    <!-- Stager Tutorials Section -->
+    <section id="stager-tutorials" class="section">
+        <nav class="navbar">
+            <h2>📚 Tutorials</h2>
+            <button onclick="showSection('stager-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <div class="tutorials-grid" id="stager-tutorials-grid"></div>
+        </div>
+    </section>
+
+    <!-- Stager Projects Section -->
+    <section id="stager-projects" class="section">
+        <nav class="navbar">
+            <h2>📋 My Projects</h2>
+            <button onclick="showSection('stager-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <form id="stager-project-form">
+                <input type="text" id="stager-project-name" placeholder="Project Name" required>
+                <textarea id="stager-project-desc" placeholder="Project Description"></textarea>
+                <select id="stager-project-status">
+                    <option value="planning">Planning</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <button type="submit" class="btn-primary">Add Project</button>
+            </form>
+            <div class="projects-list" id="stager-projects-list"></div>
+        </div>
+    </section>
+
+    <!-- User Booking Section -->
+    <section id="user-booking" class="section">
+        <nav class="navbar">
+            <h2>📅 Book a Session</h2>
+            <button onclick="showSection('user-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <form id="booking-form">
+                <div class="form-group">
+                    <label>Service Type</label>
+                    <select id="booking-service" required>
+                        <option value="">Select service...</option>
+                        <option value="consultation">Consultation</option>
+                        <option value="repair">Repair Session</option>
+                        <option value="maintenance">Maintenance</option>
+                        <option value="installation">Installation Help</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" id="booking-date" required>
+                </div>
+                <div class="form-group">
+                    <label>Time</label>
+                    <input type="time" id="booking-time" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="booking-description" placeholder="Describe your needs..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Book Appointment</button>
+            </form>
+            <div class="bookings-list">
+                <h3>Your Bookings</h3>
+                <div id="user-bookings-list"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Tools Section -->
+    <section id="user-tools" class="section">
+        <nav class="navbar">
+            <h2>🔧 Tool Management</h2>
+            <button onclick="showSection('user-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <div class="tools-grid" id="user-tools-grid"></div>
+        </div>
+    </section>
+
+    <!-- User Tutorials Section -->
+    <section id="user-tutorials" class="section">
+        <nav class="navbar">
+            <h2>📚 DIY Tutorials</h2>
+            <button onclick="showSection('user-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <div class="tutorials-grid" id="user-tutorials-grid"></div>
+        </div>
+    </section>
+
+    <!-- User Projects Section -->
+    <section id="user-projects" class="section">
+        <nav class="navbar">
+            <h2>📋 My Projects</h2>
+            <button onclick="showSection('user-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <form id="project-form">
+                <input type="text" id="project-name" placeholder="Project Name" required>
+                <textarea id="project-desc" placeholder="Project Description"></textarea>
+                <select id="project-status">
+                    <option value="planning">Planning</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <button type="submit" class="btn-primary">Add Project</button>
+            </form>
+            <div class="projects-list" id="user-projects-list"></div>
+        </div>
+    </section>
+
+    <!-- User Tools Section -->
+    <section id="user-tools" class="section">
+        <nav class="navbar">
+            <h2>🔧 Tool Management</h2>
+            <button onclick="showSection('user-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <div class="tools-grid" id="tools-grid"></div>
+        </div>
+    </section>
+
+    <!-- User Tutorials Section -->
+    <section id="user-tutorials" class="section">
+        <nav class="navbar">
+            <h2>📚 DIY Tutorials</h2>
+            <button onclick="showSection('user-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <div class="tutorials-grid" id="tutorials-grid"></div>
+        </div>
+    </section>
+
+    <!-- User Projects Section -->
+    <section id="user-projects" class="section">
+        <nav class="navbar">
+            <h2>📋 My Projects</h2>
+            <button onclick="showSection('user-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <form id="project-form">
+                <input type="text" id="project-name" placeholder="Project Name" required>
+                <textarea id="project-desc" placeholder="Project Description"></textarea>
+                <select id="project-status">
+                    <option value="planning">Planning</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <button type="submit" class="btn-primary">Add Project</button>
+            </form>
+            <div class="projects-list" id="projects-list"></div>
+        </div>
+    </section>
+
+    <!-- Manager Dashboard -->
+    <section id="manager-dashboard" class="section">
+        <nav class="navbar">
+            <h2>⚙️ Manager Dashboard</h2>
+            <div class="nav-links">
+                <button onclick="showSection('manager-users')">👥 Users</button>
+                <button onclick="showSection('manager-bookings')">📅 All Bookings</button>
+                <button onclick="showSection('manager-tools')">🔧 Manage Tools</button>
+                <button onclick="showSection('manager-tutorials')">📚 Manage Tutorials</button>
+                <button onclick="logout()">🚪 Logout</button>
+            </div>
+        </nav>
+        <div class="dashboard-content">
+            <div class="welcome-card">
+                <h3>Welcome, Manager!</h3>
+                <p>Overview of your system</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>Total Users</h4>
+                    <p class="stat-number" id="manager-users-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Total Bookings</h4>
+                    <p class="stat-number" id="manager-bookings-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Active Projects</h4>
+                    <p class="stat-number" id="manager-projects-count">0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manager Users Section -->
+    <section id="manager-users" class="section">
+        <nav class="navbar">
+            <h2>👥 User Management</h2>
+            <button onclick="showSection('manager-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Joined</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="users-table-body"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Manager Bookings Section -->
+    <section id="manager-bookings" class="section">
+        <nav class="navbar">
+            <h2>📅 All Bookings</h2>
+            <button onclick="showSection('manager-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Service</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="bookings-table-body"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Manager Tools Section -->
+    <section id="manager-tools" class="section">
+        <nav class="navbar">
+            <h2>🔧 Manage Tools</h2>
+            <button onclick="showSection('manager-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <form id="tool-form" class="inline-form">
+                <input type="text" id="tool-name" placeholder="Tool Name" required>
+                <input type="text" id="tool-category" placeholder="Category" required>
+                <input type="text" id="tool-status" placeholder="Status (Available/Borrowed)" required>
+                <button type="submit" class="btn-primary">Add Tool</button>
+            </form>
+            <div class="tools-grid" id="manager-tools-grid"></div>
+        </div>
+    </section>
+
+    <!-- Manager Tutorials Section -->
+    <section id="manager-tutorials" class="section">
+        <nav class="navbar">
+            <h2>📚 Manage Tutorials</h2>
+            <button onclick="showSection('manager-dashboard')">← Back to Dashboard</button>
+        </nav>
+        <div class="content-area">
+            <form id="tutorial-form" class="inline-form">
+                <input type="text" id="tutorial-title" placeholder="Tutorial Title" required>
+                <select id="tutorial-category" required>
+                    <option value="">Select category...</option>
+                    <option value="basic">Basic</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+                <textarea id="tutorial-content" placeholder="Tutorial Description"></textarea>
+                <button type="submit" class="btn-primary">Add Tutorial</button>
+            </form>
+            <div class="tutorials-grid" id="manager-tutorials-grid"></div>
+        </div>
+    </section>
+
+    <script src="stage.js"></script>
+</body>
+</html>
